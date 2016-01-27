@@ -1,0 +1,25 @@
+h1{
+	font-weight: lighter;
+}
+h2{
+	font-weight: lighter;
+}
+h3{
+	font-weight: lighter;
+}
+p{
+	font-family:times;
+	font-weight: lighter;
+}
+.small{
+	font-style: italic;
+	font-weight: lighter;
+}
+
+.img{
+	max-height: 80%;
+}
+
+.author-pic{
+	height: 200px;
+}
