@@ -50,7 +50,7 @@
 				<div class="col-md-12">
 					<h2 class="text-left">What's Cooking today?</h2>
 					<p class="text-success" id="blurb"><span>Today, I baked some awesome muffins - totally vegan, wholesome with flaxmeal, walnut, oats, banana and chocolate. With all the good stuff in it, and great to taste, what's not to like? </span></p>
-					<p class="text-warning text-left" id="main-recipe-pointer">Click on the image below for today's amazing and healthy <i class="fa fa-heart-o"></i><i class="fa fa-heart-o"></i> recipe!</p>
+					<p class="text-warning text-left" id="main-recipe-pointer">Click on the image below for the latest amazing and healthy <i class="fa fa-heart-o"></i><i class="fa fa-heart-o"></i> recipe!</p>
 				</div>
 			</div>
 				
@@ -78,6 +78,20 @@
 	</div>		
 	</body>	
 	
+	<script>
+
+	// Slide show that changes today's recipe picture every 2.5 seconds
+
+	setInterval(changePic, 2500); //call function changePic every 2.5 seconds
+
+	//what happens if I click on main image (Today's recipe)
+
+	$("#main-img").click(function(){
+		var imgnum = $("#main-img").attr('src'); // grabbing the image filename
+		var sernum = imgnum.match(/\d+/g); //grabbing the last char which is the number that matches the recipe file sequence
+		$("#main-img-recipe").attr('href', ("recipe" + sernum + ".html")); 	//modifying the href attribute in the link to 
+																			//match the current recipe	
+	});</script>
 	
 </html>
 			
