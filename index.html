@@ -8,11 +8,12 @@
     	<link rel="stylesheet" href="styles.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  		<script src="myjs.js"></script>
 	</head>	
+	
 	<body>
-	<div class="container-fluid">
-		
-		
+	<div class="container-fluid"> <!-- responsive via bootstrap -->
+			
 		<div class="page-header"> <!-- Header -->
 			<div class="row">
   				<div class="col-md-12"><h1 class="text-info text-center main-heading">Totally Inauthentic</h1></div>
@@ -76,37 +77,7 @@
 
 	</div>		
 	</body>	
-
-	<script>
-
-
-
-
-			// automatic slideshow begins - change pic every 2.5 seconds on loading page
-			var counter = 0;
-			function changePic(){ 
-				// increment the counter
-				counter = counter + 1;
-				// loop my pics
-				if(counter > 4){
-				counter = 1;
-			}
-			$("#main-img").attr('src',("img"+counter+".jpg"));
-			} // change pic code ends here
-			setInterval(changePic, 2500); //call function changePic every 2.5 seconds
-			//slideshow code ends here
-
-
-
-			$("#main-img").click(function(){
-				var imgnum = $("#main-img").attr('src');
-				 //$("#main-img-recipe").attr('href', ("recipe" + ))
-				var sernum = imgnum.match(/\d+/g);
-				// alert(sernum);
-				$("#main-img-recipe").attr('href', ("recipe" + sernum + ".html"));
-			});
-			
-	</script>
+	
 	
 </html>
 			
