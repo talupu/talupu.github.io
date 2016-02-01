@@ -1,0 +1,62 @@
+.main-heading{
+	font-family: sans-serif;
+	font-size: 3em;
+	font-weight: lighter;
+	
+
+
+}
+
+.tagline{
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 1.2em;
+	color:#f9cc6f;
+	
+}
+
+h2{
+	font-weight:lighter;
+}
+
+.jumbotron{
+	background-color: #ffffff;
+}
+
+a{
+	color: #999999;
+}
+
+.img-large{
+	width: 95%;
+	margin:auto;
+}
+
+.img-small{
+	width: 70%;
+	padding:5%;
+	margin:auto;
+}
+
+#blurb{
+	font-weight: lighter;
+}
+
+#author-img{
+	margin:auto;
+	height: 200px;
+
+}
+
+#author-heading{
+	font-weight: 100;
+	color: #f9cc6f;
+	margin-bottom:20px;
+}
+.well{
+	margin-left:1.5%;
+}
+
+#alertbox{
+	font-weight:100;
+}

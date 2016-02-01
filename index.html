@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    	<link rel="stylesheet" href="styles.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>	
+	<body>
+	<div class="container-fluid">
+		
+		
+		<div class="page-header"> <!-- Header -->
+			<div class="row">
+  				<div class="col-md-12"><h1 class="text-info text-center main-heading">Totally Inauthentic</h1></div>
+			</div>
+			<div class="row">
+				<div class="col-md-12"><h2 class="text-right tagline">...many modern & absolutely inauthentic vegetarian recipes <i class="fa fa-spoon"></i></h2></div>
+			</div>
+		</div> <!-- Header ends -->
+
+		<nav class="navbar navbar-default navbar-inverse"> <!-- navbar -->
+			<div class="container-fluid">
+				<div class="navbar-header navbar-brand">					
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="recipes.html">Recipes<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="recipes.html#top">All Recipes</a></li>
+							<li><a href="recipes.html#powerbreak">Power Breakfasts</a></li>
+							<li><a href="recipes.html#mealbowls">Hearty Meal Bowls</a></li>
+							<li><a href="recipes.html#snacks">Substantial Snacks</a></li>
+							<li><a href="recipes.html#juices">Juice & Smoothies Cart</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav> <!-- navbar ends -->
+		
+		
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-left">What's Cooking today?</h2>
+					<p class="text-success" id="blurb"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, delectus, facilis aspernatur dolor rerum quod tempore mollitia odio ea fuga distinctio commodi doloremque quis nemo repellendus quia aperiam saepe accusamus.</span></p>
+					<p class="text-warning">Click on the image below for today's amazing recipe!</p>
+				</div>
+			</div>
+				
+			
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<a id="main-img-recipe" href=""><img src="img1.jpg" alt="vegan muffins" class="img-responsive img-large" id="main-img"></a>
+			</div>
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-11">
+				<ul class="pager" id="more-recipes">
+					<li class="next"><a href="recipes.html">Find other recipes in the Recipe Book...</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8"></div>
+
+		</div>
+		<div class="alert alert-danger"><p id="alertbox">Please do not copy any picture, recipe or any other information. If you'd like permission to link or reproduce in part or whole any of the images or information here, just ask me at talupu-at-gmail.com! </p></div>
+
+	</div>		
+	</body>	
+
+	<script>
+
+
+
+
+			// automatic slideshow begins - change pic every 2.5 seconds on loading page
+			var counter = 0;
+			function changePic(){ 
+				// increment the counter
+				counter = counter + 1;
+				// loop my pics
+				if(counter > 4){
+				counter = 1;
+			}
+			$("#main-img").attr('src',("img"+counter+".jpg"));
+			} // change pic code ends here
+			setInterval(changePic, 2500); //call function changePic every 2.5 seconds
+			//slideshow code ends here
+
+
+
+			$("#main-img").click(function(){
+				var imgnum = $("#main-img").attr('src');
+				 //$("#main-img-recipe").attr('href', ("recipe" + ))
+				var sernum = imgnum.match(/\d+/g);
+				// alert(sernum);
+				$("#main-img-recipe").attr('href', ("recipe" + sernum + ".html"));
+			});
+			
+	</script>
+	
+</html>
+			
