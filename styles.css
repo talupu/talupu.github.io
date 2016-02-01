@@ -24,7 +24,7 @@ a{
 }
 
 .img-large{
-	width: 95%;
+	width: 100%;
 	margin:auto;
 }
 
@@ -42,6 +42,13 @@ a{
 	font-weight: bold;
 	font-size: 2em;
 }
+
+#read-recipe-button{
+	color: #777777;
+	width: 100%;
+	
+}
+
 #author-img{
 	margin:auto;
 	height: 200px;
@@ -59,4 +66,8 @@ a{
 
 #alertbox{
 	font-weight:100;
+}
+
+#alertbox-box{
+	margin-top: 1%;
 }
